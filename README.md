@@ -161,5 +161,4 @@ Tailwind CSS is used to build a responsive and clean interface with minimal cust
 Farzad Sarfaraz
 GitHub:- https://github.com/Farzadsarfaraz/influencer-pro-main
 
-https://github.com/user-attachments/assets/a1199c06-6f52-4926-b405-c7db62135f09
-
+https://github.com/user-attachments/assets/9c489db3-6bec-4e14-ab17-0ba5e101b382
