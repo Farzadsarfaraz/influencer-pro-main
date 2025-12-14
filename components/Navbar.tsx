@@ -15,7 +15,7 @@ import {
 export default function Navbar() {
   const { data: session, status } = useSession();
   const pathname = usePathname();
-  
+  console.log(session);
   const isLoading = status === "loading";
 
   if (isLoading) return null;
@@ -84,7 +84,9 @@ export default function Navbar() {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-3">
                 <div className="h-8 w-8 bg-blue-100 rounded-full flex items-center justify-center">
-                  <User className="h-5 w-5 text-blue-600" />
+                  {session.user.image == null ? (
+                    <User className='h-5 w-5 text-blue-600' />
+                  ) : <img src={session.user.image} alt="mypro" className='h-full w-full text-blue-600 rounded-full' />}
                 </div>
                 <div>
                   <p className="text-sm font-medium text-gray-700">{session.user?.name || 'User'}</p>
