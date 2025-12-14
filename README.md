@@ -1,36 +1,164 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Influencer Management Platform
+
+A complete influencer management web application that allows brands to discover, filter, review, and manage influencer profiles. This project is built with Next.js App Router, Prisma, and PostgreSQL and can be used as a production-ready demo or as a foundation for a real SaaS product.
+
+---
+
+## Features
+
+* Authentication using NextAuth with Credentials Provider
+* Influencer search with advanced filtering options
+* Favorites management (add and remove influencers)
+* Detailed influencer profiles with full metrics
+* Modern and clean user interface using Tailwind CSS
+* PostgreSQL database with Prisma ORM
+* Server Components with Next.js App Router
+
+---
+
+## Tech Stack
+
+Frontend
+
+* Next.js (App Router)
+* React Server Components
+* Tailwind CSS
+* Lucide React Icons
+
+Backend
+
+* Next.js API Routes
+* NextAuth Authentication
+
+Database
+
+* PostgreSQL
+* Prisma ORM
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Farzadsarfaraz/influencer-pro-main.git
+cd influencer-pro-main
+```
+
+---
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 3. Environment variables
+
+Create a .env file in the root directory and add the following values
+
+```env
+DATABASE_URL=""
+
+FACEBOOK_CLIENT_ID=""
+FACEBOOK_CLIENT_SECRET=""
+
+AUTH_SECRET=""
+```
+
+---
+
+### 4. Setup database
+
+Push the Prisma schema to the database
+
+```bash
+npx prisma db push
+```
+
+Optional demo data
+
+```bash
+npx prisma db seed
+```
+
+---
+
+### 5. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the application in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+influencer-pro-main/
+├── prisma/
+│   ├── schema.prisma
+│   └── seed.ts
+├── app/
+│   ├── api/
+│   │   ├── auth/
+│   │   │   └── [...nextauth]/
+│   │   │       └── route.ts
+│   │   ├── influencers/
+│   │   │   └── route.ts
+│   │   └── favorites/
+│   │       └── route.ts
+│   ├── auth/
+│   │   ├── login/
+│   │   │   └── page.tsx
+│   │   └── layout.tsx
+│   ├── influencers/
+│   │   ├── page.tsx
+│   │   └── [id]/
+│   │       └── page.tsx
+│   ├── favorites/
+│   │   └── page.tsx
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── components/
+├── lib/
+├── middleware.ts
+├── .env
+├── package.json
+├── tsconfig.json
+└── ...
+```
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Authentication
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Authentication is implemented with NextAuth using a Credentials Provider. Protected routes are enforced on the server side.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Database
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The database layer uses Prisma ORM with PostgreSQL. The schema includes users, influencers, and favorite relations.
+
+---
+
+## Styling
+
+Tailwind CSS is used to build a responsive and clean interface with minimal custom styles.
+
+---
+
+## Author
+
+Farzad Sarfaraz
+GitHub:- https://github.com/Farzadsarfaraz/influencer-pro-main
+
+https://github.com/user-attachments/assets/9c489db3-6bec-4e14-ab17-0ba5e101b382
