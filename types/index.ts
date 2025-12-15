@@ -22,10 +22,9 @@ export interface Influencer {
 
 export interface User {
   id: string;
-  email: string;
   name?: string | null;
-  createdAt: Date;
-  updatedAt: Date;
+  email: string | null;
+  image?: string | null;
 }
 
 export interface Favorite {
@@ -33,5 +32,5 @@ export interface Favorite {
   userId: string;
   influencerId: string;
   createdAt: Date;
-  influencer?: Influencer | null; 
+  influencer?: Influencer | null;
 }
