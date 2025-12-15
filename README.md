@@ -4,6 +4,14 @@ A complete influencer management web application that allows brands to discover,
 
 ---
 
+🚀 Live Demo
+
+Live Application: https://influencer-pro-main.vercel.app/
+
+You can try the full functionality directly in the browser without any local setup.
+
+---
+
 ## Features
 
 * Authentication using NextAuth with Credentials Provider
