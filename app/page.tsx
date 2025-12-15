@@ -182,7 +182,7 @@ export default async function Home() {
         </div>
         
         <div className="mt-8 pt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
-          <p>© {new Date().getFullYear()} InfluencerHub. Alle Rechte vorbehalten.</p>
+          <p>© {new Date().getFullYear()} InfluencerFrame. Alle Rechte vorbehalten.</p>
           <p className="mt-2">Die professionelle Plattform für Influencer-Marketing</p>
         </div>
       </footer>

@@ -1,6 +1,6 @@
 export interface Influencer {
   id: string;
-  externalId?: string;
+  externalId?: string | null;   // allow null
   name: string;
   handle: string;
   platform: string[];
@@ -10,12 +10,12 @@ export interface Influencer {
   avgComments: number;
   topics: string[];
   location: string;
-  gender?: string;
-  age?: number;
-  avatar?: string;
-  bio?: string;
-  email?: string;
-  website?: string;
+  gender?: string | null;  
+  age?: number | null;      
+  avatar?: string | null;     
+  bio?: string | null;         
+  email?: string | null;    
+  website?: string | null;  
   createdAt: Date;
   updatedAt: Date;
 }
@@ -23,7 +23,7 @@ export interface Influencer {
 export interface User {
   id: string;
   email: string;
-  name?: string;
+  name?: string | null;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -33,5 +33,5 @@ export interface Favorite {
   userId: string;
   influencerId: string;
   createdAt: Date;
-  influencer?: Influencer;
+  influencer?: Influencer | null; 
 }
