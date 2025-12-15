@@ -14,7 +14,6 @@ interface SearchParams {
   maxFollowers?: string;
 }
 
-// Validation function for follower counts
 function safeParseFollowers(value: string, defaultValue: number): number {
   const parsed = parseInt(value);
   if (isNaN(parsed)) return defaultValue;
@@ -31,17 +30,14 @@ export default async function InfluencersPage({
 }) {
   const session = await getServerSession(authOptions);
   
-  // Resolve searchParams
   const params = await Promise.resolve(searchParams);
   
-  // Parse search parameters with safe parsing for followers
   const search = typeof params.search === 'string' ? params.search : '';
   const topic = typeof params.topic === 'string' ? params.topic : '';
   const platform = typeof params.platform === 'string' ? params.platform : '';
   const location = typeof params.location === 'string' ? params.location : '';
   const gender = typeof params.gender === 'string' ? params.gender : '';
   
-  // Safe parsing for follower counts
   const minFollowersInput = typeof params.minFollowers === 'string' 
     ? safeParseFollowers(params.minFollowers, 0)
     : 0;
@@ -50,11 +46,10 @@ export default async function InfluencersPage({
     ? safeParseFollowers(params.maxFollowers, 1000000)
     : 1000000;
 
-  // Ensure min <= max
+
   const minFollowers = Math.min(minFollowersInput, maxFollowersInput);
   const maxFollowers = Math.max(minFollowersInput, maxFollowersInput);
 
-  // Build where clause (without follower filter initially)
   const where: any = {};
 
   if (search) {
@@ -84,7 +79,7 @@ export default async function InfluencersPage({
   if (gender && gender !== 'all') {
     where.gender = gender;
   }
-  // Fetch influencers with all filters EXCEPT followers
+
   let influencers = await prisma.influencer.findMany({
     where,
     include: {
@@ -134,7 +129,6 @@ export default async function InfluencersPage({
         locations={locations}
         genders={genders}
       />
-
       <InfluencerGrid 
         influencers={influencers.map(influencer => ({
           ...influencer,

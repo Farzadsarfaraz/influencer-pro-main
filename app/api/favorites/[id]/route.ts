@@ -16,7 +16,6 @@ export async function DELETE(
 
     const { id } = await context.params; 
 
-    // Find the favorite
     const favorite = await prisma.favorite.findFirst({
       where: {
         userId: session.user.id,
@@ -31,7 +30,6 @@ export async function DELETE(
       );
     }
 
-    // Delete the favorite
     await prisma.favorite.delete({
       where: {
         id: favorite.id,

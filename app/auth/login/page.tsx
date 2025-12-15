@@ -95,7 +95,6 @@ export default function LoginForm() {
           </p>
         </div>
 
-        {/* Facebook OAuth Button */}
         <button
           type="button"
           onClick={handleFacebookSignIn}

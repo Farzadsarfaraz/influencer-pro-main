@@ -126,8 +126,6 @@ export default function InfluencerDetail({ influencer, isFavorite, userId }: Inf
           </div>
         </div>
       </div>
-
-      {/* Quick Stats */}
       <div className="space-y-4">
         <h3 className="text-lg font-semibold text-white">Quick Stats</h3>
         <div className="space-y-3">
@@ -155,8 +153,6 @@ export default function InfluencerDetail({ influencer, isFavorite, userId }: Inf
           )}
         </div>
       </div>
-
-      {/* Links */}
       {influencer.website && (
         <div className="pt-4 border-t border-white/20">
           <a
