@@ -67,7 +67,7 @@ export default async function InfluencerDetailPage({ params }: PageProps) {
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
         <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-8 text-white">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
-            <div className="flex flex-col space-x-6">
+            <div className="flex flex-col space-x-6 space-y-4">
               <div className="h-40 w-40 rounded-full border-4 border-white overflow-hidden">
                 <img
                   src={influencer.avatar || "/default-avatar.png"}
@@ -111,22 +111,16 @@ export default async function InfluencerDetailPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* Content */}
         <div className="p-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column */}
             <div className="lg:col-span-2 space-y-8">
-              {/* Bio */}
               <div>
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">About</h2>
                 <p className="text-gray-600 leading-relaxed">
                   {influencer.bio || 'No bio available.'}
                 </p>
               </div>
-
-              {/* Stats Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {/* Platforms */}
                 <div className="bg-blue-50 p-4 rounded-xl">
                   <div className="text-sm text-blue-600 font-medium mb-1">Platforms</div>
                   <div className="space-y-2">
@@ -138,8 +132,6 @@ export default async function InfluencerDetailPage({ params }: PageProps) {
                     ))}
                   </div>
                 </div>
-
-                {/* Topics */}
                 <div className="bg-purple-50 p-4 rounded-xl">
                   <div className="text-sm text-purple-600 font-medium mb-1">Topics</div>
                   <div className="flex flex-wrap gap-1">
@@ -151,7 +143,6 @@ export default async function InfluencerDetailPage({ params }: PageProps) {
                   </div>
                 </div>
 
-                {/* Location */}
                 <div className="bg-green-50 p-4 rounded-xl">
                   <div className="text-sm text-green-600 font-medium mb-1">Location</div>
                   <div className="flex items-center space-x-2">
@@ -159,8 +150,6 @@ export default async function InfluencerDetailPage({ params }: PageProps) {
                     <span className="font-semibold text-gray-800">{influencer.location}</span>
                   </div>
                 </div>
-
-                {/* Engagement Stats */}
                 <div className="bg-orange-50 p-4 rounded-xl">
                   <div className="text-sm text-orange-600 font-medium mb-1">Engagement</div>
                   <div className="space-y-1">
@@ -177,9 +166,7 @@ export default async function InfluencerDetailPage({ params }: PageProps) {
               </div>
             </div>
 
-            {/* Right Column - Contact & Links */}
             <div className="space-y-6">
-              {/* Contact Information */}
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-lg font-semibold text-gray-800 mb-4">Contact & Links</h3>
                 
@@ -210,8 +197,6 @@ export default async function InfluencerDetailPage({ params }: PageProps) {
                       </a>
                     </div>
                   )}
-
-                  {/* Social Media Links */}
                   <div>
                     <div className="text-sm text-gray-500 mb-2">Social Media</div>
                     <div className="flex flex-wrap gap-3">
@@ -261,8 +246,6 @@ export default async function InfluencerDetailPage({ params }: PageProps) {
                   </div>
                 </div>
               </div>
-
-              {/* Performance Metrics */}
               <div className="bg-gray-50 p-6 rounded-xl">
                 <h3 className="text-lg font-semibold text-gray-800 mb-4">Performance Metrics</h3>
                 <div className="space-y-3">

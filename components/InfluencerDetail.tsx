@@ -71,7 +71,7 @@ export default function InfluencerDetail({ influencer, isFavorite, userId }: Inf
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-12 mt-4">
       <div className="flex flex-wrap gap-3">
         <button
           onClick={handleToggleFavorite}
@@ -135,9 +135,9 @@ export default function InfluencerDetail({ influencer, isFavorite, userId }: Inf
               {Array.isArray(influencer.platform) ? influencer.platform.join(', ') : 'N/A'}
             </span>
           </div>
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center gap-14 md:gap-0">
             <span className="text-white/80">Topics</span>
-            <span className="font-semibold text-white">
+            <span className="font-semibold text-white text-sm md:text-base">
               {Array.isArray(influencer.topics) ? influencer.topics.join(', ') : 'N/A'}
             </span>
           </div>
