@@ -1,9 +1,12 @@
 import type { NextAuthOptions } from "next-auth";
 import FacebookProvider from "next-auth/providers/facebook";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { PrismaAdapter } from "@auth/prisma-adapter";
-import { prisma } from "./prisma";
+// import { PrismaAdapter } from "@auth/prisma-adapter";
+// import { prisma } from "./prisma";
 import bcrypt from "bcrypt";
+
+import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import { prisma } from "./prisma";
 
 export const authOptions: NextAuthOptions = {
   // CORRECT WAY TO USE PrismaAdapter
