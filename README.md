@@ -4,6 +4,14 @@ A complete influencer management web application that allows brands to discover,
 
 ---
 
+🚀 Live Demo
+
+Live Application: https://influencer-pro-main.vercel.app/
+
+You can try the full functionality directly in the browser without any local setup.
+
+---
+
 ## Features
 
 * Authentication using NextAuth with Credentials Provider
@@ -140,7 +148,16 @@ influencer-pro-main/
 
 ## Authentication
 
-Authentication is implemented with NextAuth using a Credentials Provider. Protected routes are enforced on the server side.
+Authentication
+
+Authentication is implemented with NextAuth using a Credentials Provider.
+
+⚠️ Facebook Login Notice
+Facebook login is currently not available for public users. The Facebook App is in development mode, which means only developer and test accounts are allowed to log in.
+
+For demo and testing purposes, please use the Credentials-based authentication instead.
+
+Protected routes are enforced on the server side.
 
 ---
 
