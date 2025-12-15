@@ -90,7 +90,7 @@ npx prisma db push
 Optional demo data
 
 ```bash
-npx prisma db seed
+ npm run prisma:seed
 ```
 
 ---
